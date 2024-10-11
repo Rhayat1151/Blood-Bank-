@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donors with Blood Group A+</title>
+  <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+  <h1>Donors with Blood Group A+</h1>
+
+  <!-- Table displaying donor details -->
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Contact</th>
+        <th>Email</th>
+        <th>Age</th>
+        <th>Last Donated</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% donors.forEach(function(donor) { %>
+        <tr>
+          <td><%= donor.name %></td>
+          <td><%= donor.contact %></td>
+          <td><%= donor.email %></td>
+          <td><%= donor.age %></td>
+          <td><%= donor.last_donated %></td>
+          <td>
+            <a href="/edit/Apos/<%= donor.id %>">Edit</a> | 
+            <form action="/delete/Apos/<%= donor.id %>" method="POST" style="display:inline;">
+              <button type="submit">Delete</button>
+            </form>
+          </td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+
+  <a href="/">Back to Homepage</a>
+</body>
+</html>

@@ -1,0 +1,20 @@
+'
+Creating Database in pgadmin by name Blood-Bank.
+
+CREATE TABLE Apos (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(100),
+    contact VARCHAR(20),
+    email VARCHAR(100),
+    age INTEGER,
+    last_donated DATE
+);
+//Use this command for creating table for each of the blood group in Database.
+// In the command line change the directory to the folder of this file.
+// Run the following command in terminal.
+    npm init -y
+    npm install express pg body-parser ejs
+//In the inde3x.js file change the password of database with yours.
+// Run the following command in terminal.
+                  nodemon index.js
+'                  
